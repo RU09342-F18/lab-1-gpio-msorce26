@@ -62,20 +62,29 @@
 //   Built with CCS Version 4.2.0 and IAR Embedded Workbench Version: 5.10
 //******************************************************************************
 
+//includes msp430 header file
 #include <msp430.h>
 
 int main(void)
 {
-  WDTCTL = WDTPW + WDTHOLD;                 // Stop watchdog timer
-  P1DIR |= 0x01;                            // Set P1.0 to output direction
+  //stops watchdog timer
+  WDTCTL = WDTPW + WDTHOLD;
+  
+  //sets direction of pin1 bit0 to output(P1.0)
+  //makes LED an output
+  P1DIR |= 0x01;         
 
+  //infinite for loop to make LED blink cycle
   for (;;)
   {
+    //creates unsigned int i
     volatile unsigned int i;
 
-    P1OUT ^= 0x01;                          // Toggle P1.0 using exclusive-OR
+    //toggles LED state
+    P1OUT ^= 0x01;
 
-    i = 50000;                              // Delay
+    //50000 cycle delay
+    i = 50000;             
     do (i--);
     while (i != 0);
   }
