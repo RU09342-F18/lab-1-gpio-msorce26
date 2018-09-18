@@ -1,22 +1,32 @@
+//includes msp430 header file
 #include <msp430.h>
 
 void main( void )
 {
-  unsigned int i; //delay variable
+  //creates unsigned int i for loops
+  unsigned int i;
 
-  WDTCTL = WDTPW | WDTHOLD; // Stop watchdog timer
+  // Stop watchdog timer
+  WDTCTL = WDTPW | WDTHOLD; 
 
-  P1REN |= 0x02; // Enable resistor on P1.1
-  P1OUT  = 0x02; // Set resistor to pull-up, P1.0 low
-  P1DIR  = 0x01; // Set P1.0 as output and P1.1 as intput
+  // Enable resistor on P1.1
+  P1REN |= 0x02; 
+  
+  // Set resistor to pull-up, P1.0 low
+  P1OUT  = 0x02; 
+  
+  // Set P1.0 as output and P1.1 as intput
+  P1DIR  = 0x01; 
 
-
-  while( 1 )
+  while(1)
   {
-    if( !(P1IN & 0x02) ) // If push button is pressed
+    // If push button is pressed
+    if(!(P1IN & 0x02)) 
     {
+      //toggles LED
       P1OUT ^= 0x01;
 
+      //delay loop for 30000 clock cycles
       for( i=0; i<30000; i++ );
     }
   }
