@@ -1,5 +1,8 @@
 # Multiple Blink
 
+Sample code by TI, edited by Michael Sorce
+Last updated: 9/19/18
+
 The purpose of the multiple blink programs in this section is to blink two LED on the dev board at two different frequencies.
 
 Each programs begins be including the main msp430 header file so it can access the processors standard library. The MSP432 program also includes the standard integar header file so that it can use an unsigned 32bit int later on.
