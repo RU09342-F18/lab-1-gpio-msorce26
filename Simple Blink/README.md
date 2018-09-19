@@ -10,6 +10,6 @@ For both processors, P1DIR is set to 0x01 to turn the P1.0 port to an output, wh
 
 The FR has an additional line of code (P1OUT &= ~BIT0) which clears the output latch for a defined power on state.
 
-Both programs use an infinite loop (G2 uses do-while, FR uses while) to toggle the LED infinitely. To toggle the LED, P!OUT is XORed with BIT0. This will continuously flip the last bit in P1OUT, therefore toggling the LED.
+Both programs use an infinite loop (G2 uses do-while, FR uses while) to toggle the LED infinitely. To toggle the LED, P1OUT is XORed with BIT0. This will continuously flip the last bit in P1OUT, therefore toggling the LED.
 
 A delay is used in the loop to keep the LED from toggling too fast for the observer to see. The rate that the LED is flashing can be increased by increasing the clock cycle delay in the loop.
