@@ -1,5 +1,8 @@
 # Simple Blink
 
+Sample code by TI, edited by Michael Sorce
+Last updated: 9/19/18
+
 The purpose of the simple blink programs in this section is to blink an LED on the dev board at any speed, as long as it has a 50% duty cycle (on half time, off half).
 
 Each programs begins be including the main msp430 header file so it can access the processors standard library.
