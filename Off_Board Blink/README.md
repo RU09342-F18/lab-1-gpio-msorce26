@@ -9,3 +9,5 @@ A circuit diagram can be seen in the Lab1_Offboard_Blink_Circuit.png. In this im
 Finally, the pins that are usually automatically connected to LEDs need to be manually connected. Pin 2 and 14 on the processor are connected in series with a 1kohm resistor, LED and ground.
 
 This set up allong with the pre-programmed processor allows for the two LEDs to blink at different frequencies as in the multi_blink programs.
+
+A video of this working can be seen in the MSP430G2553 folder.
