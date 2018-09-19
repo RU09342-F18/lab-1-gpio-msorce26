@@ -1,4 +1,4 @@
-#Simple Blink
+# Simple Blink
 
 The purpose of the simple blink programs in this section is to blink an LED on the dev board at any speed, as long as it has a 50% duty cycle (on half time, off half).
 
