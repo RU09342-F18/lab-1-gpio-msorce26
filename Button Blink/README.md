@@ -1,5 +1,8 @@
 # Button Blink
 
+Sample code by TI, edited by Michael Sorce
+Last updated: 9/19/18
+
 The purpose of the button blink programs in this section is to blink an LED on a dev board when an observer presses an external button.
 
 Each programs begins be including the main msp430 header file so it can access the processors standard library. 
